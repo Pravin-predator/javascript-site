@@ -3,8 +3,8 @@ from selenium import webdriver
 
 
 
-class CountriesSpiderSpider(scrapy.Spider):
-    name = "countries_spider"
+class QuotesSpider(scrapy.Spider):
+    name = "example"
     def start_requests(self):
         url = "https://quotes.toscrape.com/scroll"
         yield scrapy.Request(url=url, callback=self.parse)
