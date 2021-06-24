@@ -13,9 +13,9 @@ class QuotesSpider(scrapy.Spider):
         driver = webdriver.Chrome()
         driver.get("https://quotes.toscrape.com/scroll")
         quote = driver.find_elements_by_class_name("quote")
-        for country in quote:
+        for qt in quote:
             yield {
-                "quote": country.text
+                "quote": qt.text
             }
 
 
